@@ -4,7 +4,7 @@ function ConnectDB()
 {
     $servername = "localhost";
     $username = "root";
-   $password = "nitrou18b_boy";
+   $password = "";
 
 
     try {
@@ -22,7 +22,7 @@ function getTraducteur($lang1, $lang2)
 
     $servername = "localhost";
     $username = "root";
-    $password = "nitrou18b_boy";
+    $password = "";
 
   try {
     $conn = new PDO("mysql:host=$servername;dbname=tp2cs", $username, $password);
@@ -43,7 +43,7 @@ function login()
     session_start();
     $servername = "localhost";
     $username = "root";
-    $password = "nitrou18b_boy";
+    $password = "";
     $dbname = "tp2cs";
 
    try {
@@ -120,7 +120,7 @@ function Signup()
 
     $servername = "localhost";
     $username = "root";
-    $password = "nitrou18b_boy";
+    $password = "";
 
    try {
     $conn = new PDO("mysql:host=$servername;dbname=tp2cs", $username, $password);
@@ -167,7 +167,7 @@ function SaveDemande($user_id, $traducteur_id, $nom, $prenom, $email, $numero, $
     /**************** */
     $servername = "localhost";
     $username = "root";
-   $password = "nitrou18b_boy";
+   $password = "";
 
    try {
     $conn = new PDO("mysql:host=$servername;dbname=tp2cs", $username, $password);
@@ -224,7 +224,7 @@ function getDemande($id_client)
 
     $servername = "localhost";
     $username = "root";
-    $password = "nitrou18b_boy";
+    $password = "";
 
     try {
     $conn = new PDO("mysql:host=$servername;dbname=tp2cs", $username, $password);
@@ -245,7 +245,7 @@ function getDemandeTraducteur($id_traducteur)
 
     $servername = "localhost";
     $username = "root";
-    $password = "nitrou18b_boy";
+    $password = "";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=tp2cs", $username, $password);
@@ -263,7 +263,7 @@ function ajouterTraducteur()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "nitrou18b_boy";
+    $password = "";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=tp2cs", $username, $password);
@@ -331,7 +331,7 @@ function getArticleActive()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "nitrou18b_boy";
+    $password = "";
     try {
     $conn = new PDO("mysql:host=$servername;dbname=tp2cs", $username, $password);
 
