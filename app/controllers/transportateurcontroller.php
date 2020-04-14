@@ -71,39 +71,6 @@ class TransportateurController extends AbstractController
 
     }
 
-    /* public function addAction()
-    {
-    if (isset($_POST['regester'])) {
-    $obj = array(
-    $_POST['nom'],
-    $_POST['prenom'],
-    $_POST['adresse'],
-    $_POST['phone'],
-    $_POST['email'],
-    $_POST['password'],
-    );
-    $transportateur = new TransportateurModel($obj, false);
-    $transportateur->create();
-    $this->redirect('/web2/public/');
 
-    }
-    $this->_view();
-
-    }
-     */
-
-    public function loginAction()
-    {
-
-        $rows = TraductionModel::getByTraducteur((int) $_SESSION['sess_traducteur_id']);
-        foreach ($rows as $row) {
-            array_push($this->_data, new TransportateurModel($row));
-        }
-        if (isset($_POST['logout'])) {
-            $this->redirect('/web2/public/index');
-        }
-
-        $this->_view();
-    }
 
 }

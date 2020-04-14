@@ -1,57 +1,6 @@
-<!DOCTYPE html>
-<?php  session_start();?>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>User profile  - Bootsnipp.com</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-        
-    </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-</head>
-<body>
 
-<hr>
-<div class="container bootstrap snippet">
-    <div class="row">
-  		<div class="col-sm-10"><h1><?php echo $_SESSION['client'][0]->getNom(); ?></h1></div>
-    	<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src=""></a></div>
-    </div>
-    <div class="row">
-  		<div class="col-sm-3"><!--left col-->
-              
-          <ul class="list-group">
-            <li class="list-group-item text-muted">Profil</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Nom</strong></span> <?php echo $_SESSION['client'][0]->getNom();?></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Email</strong></span> <?php echo $_SESSION['client'][0]->getEmail();?></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Telephone</strong></span> <?php echo $_SESSION['client'][0]->getTelephone()?></li>
-             <li class="list-group-item text-right"><span class="pull-left"><strong>Adresse</strong></span> <?php echo $_SESSION['client'][0]->getAdresse()?></li>
-            
-          </ul> 
-          <ul class="list-group">
-              <li class="list-group-item text-right"><span class="pull-left"><strong>Allergie</strong></span> <button>edit</button><div class="expandable form-group text-center" style="margin-top:30px; width:100%" data-count="1">
-        <div class="row">
-    	    <input name="name[]" type="text" id="name[]"  placeholder="Allergia">
-		    <button class="btn add-more" id="add-more" type="button">+</button>
-	    </div>
-    </div></li>
-           
-            
-          </ul> 
-               
-          
-        </div><!--/col-3-->
-    	<div class="col-sm-9">
-          
-          <ul class="nav nav-tabs" id="myTab">
-            <li class="active"><a href="#home" data-toggle="tab">Mes marchndise</a></li>
-            <li><a href="#messages" data-toggle="tab">Les trajets</a></li>
-            <li><a href="#settings" data-toggle="tab">Les reponses</a></li>
-          </ul>
+<?php  session_start();?>
+<h1>Mes marchendeise</h1>
               
           <div class="tab-content">
             <div class="tab-pane active" id="home">
@@ -84,85 +33,13 @@
                   } ?>
                     <tr>
             <td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="demo1"> 
-            <form method="POST" name="ajoutr-marchendise"> 
-            <table class="table table-striped">
-                  <h1>Ajouter une marchendise</h1>
-                      
-                     <tbody>
-					<tr id='addr0'>
-						<td>
-						
-						</td>
-						<td>
-						<textarea type="text" name='discription'  placeholder='discription' class="form-control"></textarea>
-						</td>
-						<td>
-						<input type="text" name='lieu-depart' placeholder='Lieu du depart' class="form-control"/>
-						</td>
-						<td>
-						<input type="text" name='lieu-arrive' placeholder="Lieu d'arrive " class="form-control"/>
-						</td>
-          </tr>
-          <tr id='addr3'>
-						<td>
-						
-						</td>
-						<td>
-						<input type="date" name='date-depart' placeholder='date du depart' class="form-control"/>
-					 </td>
-						<td>
-						<input type="date" name='date-arrive' placeholder="date d'arrive" class="form-control"/>
-						</td>
-					</tr>
-          <tr id='addr1'>
-            <td>
-						<input type="number" name='volume' placeholder='Volume ' class="form-control"/>
-            </td>
-            <td>
-						<select name="cat-volum">
-                <option value="m³">m³</option>     
-           </select>
-            </td>
-            <td>
-						<input type="number" name='poid' placeholder='Poid en kg' class="form-control"/>
-            </td>
-            <td>
-						<select name="cat-poid">
-                <option value="kg" >kg</option>     
-           </select></td>
-          </tr>
-          <tr>
-            <td>
-              <textarea type = "text" name = "demmande-speaciale" placeholder="demande speciale" class="form-control"></textarea>
-            </td>
-            <td>
-              <label for="mesimage">Ajouter des photos</label>
-              <input type="file" id="mesimages" name="photos">
-            </td>
-          </tr>
-				</tbody>
-				
-                 </table>
-
-               	<a id="add_row" class="btn btn-default pull-left">Annuler</a><input type="submit" value="Ajouter" name="ajouter" class="pull-right btn btn-default">
-              </form>      
-              </div> </td>
-        </tr>
-                    
-     </tbody>                  
-              </table>
-                <hr>
-               <div class="row">
-                  <div class="col-md-6 col-md-offset-4 text-center">
-                  	<ul class="pagination" id="myPager"></ul>
-                  </div>
-                </div>
-              </div><!--/table-resp-->
+ 
               
               
               
               <hr>
               
+              <h1>Les trajets disponible</h1>
              </div><!--/tab-pane-->
              <div class="tab-pane" id="messages">
                
